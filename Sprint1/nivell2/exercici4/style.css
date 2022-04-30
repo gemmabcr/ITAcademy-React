@@ -7,7 +7,6 @@
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1em;
     display: grid;
     grid-gap: 1em;
     font-family: Roboto, sans-serif;
@@ -18,13 +17,13 @@ main {
 header {
     display: grid;
     grid-gap: 0.5em;
-    padding: 1em;
+    grid-template-rows: 3fr 2fr;
     background-color: white;
-    background-image: url("../images/header.jpg");
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.7)), url("../images/header.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 15vw;
+    height: 20vw;
 }
 
 nav {
@@ -66,7 +65,9 @@ nav .socials img {
 .subtitle {
     display: flex;
     justify-content: center;
-    align-items: end;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.15));
+    margin: 0 3em;
+    padding: 2em;
     color: rgba(250, 100, 45, 0.8);
     font-family: Didot, serif;
     font-size: 1.25em;
