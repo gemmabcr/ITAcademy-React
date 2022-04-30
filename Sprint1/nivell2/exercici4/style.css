@@ -8,6 +8,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
+    grid-template-rows: repeat(3, minmax(min-content, 1fr));
     grid-gap: 1em;
     font-family: Roboto, sans-serif;
 }
@@ -20,10 +21,9 @@ header {
     grid-template-rows: 3fr 2fr;
     background-color: white;
     background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.7)), url("../images/header.jpg");
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 20vw;
+    min-height: fit-content;
 }
 
 nav {
@@ -47,7 +47,7 @@ nav div:first-of-type {
     justify-content: center;
 }
 
-nav ul {
+header ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -58,7 +58,7 @@ nav ul {
     color: dimgrey;
 }
 
-nav ul li {
+header ul li {
     padding: 0.25em;
     border-radius: 0.25em;
 }
