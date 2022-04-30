@@ -42,6 +42,11 @@ nav {
     }
 }
 
+nav div:first-of-type {
+    display: flex;
+    justify-content: center;
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -51,6 +56,17 @@ nav ul {
     font-size: 0.75em;
     font-weight: bold;
     color: dimgrey;
+}
+
+nav ul li {
+    padding: 0.25em;
+    border-radius: 0.25em;
+}
+
+nav ul li:hover {
+    color: #FA642DCC;
+    cursor: pointer;
+    border-bottom: 1px solid #FA642DCC;
 }
 
 nav .socials {
