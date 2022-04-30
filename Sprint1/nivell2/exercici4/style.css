@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+    display: grid;
+    grid-gap: 1em;
+    font-family: Roboto, sans-serif;
+}
+
+/************ HEADER ************/
+
+header {
+    display: grid;
+    grid-gap: 0.5em;
+    padding: 1em;
+    background-color: white;
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 15vw;
+}
+
+nav {
+    padding: 1em;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+}
+
+/* header mobile */
+@media (max-width: 600px) {
+     nav {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: dimgrey;
+}
+
+nav .socials {
+    display: flex;
+    justify-content: end;
+}
+
+nav .socials img {
+    margin: 0 0.5em;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color: rgba(250, 100, 45, 0.8);
+    font-family: Didot, serif;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+/************ SECTION ************/
+
+section {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 0.5em;
+    padding: 1em;
+    background-color: lightblue;
+}
+
+@media (max-width: 960px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        background-color: yellow;
+    }
+}
+
+section article {
+    background-color: lightslategrey;
+    padding: 1em;
+    display: grid;
+    grid-gap: 1em;
+}
+
+section article div:nth-child(3) {
+    height: 1em;
+    background-color: lightcoral;
+}
+
+section article .double-paragraph {
+    height: 1em;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1em;
+    background-color: transparent;
+}
+
+/* double-paragraph mobile */
+@media (max-width: 600px) {
+    section article .double-paragraph {
+        display: contents;
+    }
+}
+
+section article .double-paragraph * {
+    height: 1em;
+    background-color: lightblue;
+}
+
+section aside {
+    background-color: coral;
+    padding: 1em;
+}
+
+section aside * {
+    height: 1em;
+    margin-bottom: 0.5em;
+}
+
+/************ FOOTER ************/
+footer {
+    display: grid;
+    padding: 1em;
+    background-color: lightblue;
+}
+
+footer * {
+    background-color: lightcoral;
+    height: 1em;
+}
