@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    grid-gap: 1em;
+    font-family: Roboto, sans-serif;
+}
+
+/************ HEADER ************/
+
+header {
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-rows: 3fr 2fr;
+    background-color: white;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.7)), url("../../nivell2/images/header.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: fit-content;
+}
+
+nav {
+    padding: 1em 2em;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+}
+
+.logoNav {
+    animation-name: minimizar;
+    animation-duration: 4s;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: dimgrey;
+}
+
+header ul li {
+    padding: 0.25em;
+    border-radius: 0.25em;
+}
+
+nav ul li:hover {
+    color: #FA642DCC;
+    cursor: pointer;
+    border-bottom: 1px solid #FA642DCC;
+}
+
+nav .socials {
+    display: flex;
+    justify-content: end;
+}
+
+nav .socials img {
+    margin: 0 0.5em;
+}
+
+.subtitle {
+    display: inline-flex;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.15));
+    margin: 0 3em;
+    padding: 2em;
+    color: rgba(250, 100, 45, 0.8);
+    font-family: Didot, serif;
+    font-size: 1.25em;
+    text-align: center;
+    animation-name: minimizar;
+    animation-duration: 4s;
+}
+
+/************ SECTION ************/
+
+section {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 1em;
+}
+
+section article {
+    background-color: lightgrey;
+    padding: 1em;
+    display: grid;
+    grid-gap: 1em;
+}
+
+section article .double-paragraph {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1em;
+    min-height: fit-content;
+}
+
+section .single-section {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding: 0.5em;
+}
+
+section .banner-section-article {
+    width: inherit;
+    height: 200px;
+    background-size: cover;
+    display: flex;
+    align-content: end;
+    padding: 0.5em;
+}
+
+.banner-cultura {
+    background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.3)), url('../../nivell2/images/sakura.jpg');
+    animation-name: blurred;
+    animation-duration: 2s;
+}
+
+.banner-gastronomia {
+    background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.3)), url('../../nivell2/images/comida.jpg');
+    animation-name: blurred;
+    animation-duration: 2s;
+}
+
+.banner-turismo {
+    background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.3)), url('../../nivell2/images/fuji.jpg');
+    animation-name: blurred;
+    animation-duration: 2s;
+}
+
+.banner-noche {
+    background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.3)), url('../../nivell2/images/noche.jpg');
+    animation-name: blurred;
+    animation-duration: 2s;
+}
+
+.date-text {
+    display: flex;
+    align-items: end;
+    color: #ffffab;
+    font-weight: bold;
+    font-size: 0.75em;
+}
+
+.pink-title {
+    background-color: lightcoral;
+    color: lightyellow;
+    letter-spacing: 0.1em;
+    margin-top: 0.25em;
+    padding: 0.5em;
+    text-transform: uppercase;
+    animation-name: deslizar;
+    animation-duration: 1s;
+}
+
+.paragraphs-section{
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 0.5em;
+    padding: 0.5em;
+    height: max-content;
+}
+
+section aside {
+    background-color: lightgrey;
+    padding: 2em;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.title-aside {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+}
+
+/************ FOOTER ************/
+footer {
+    display: grid;
+    padding: 0 1em;
+    margin-bottom: 1em;
+    background-color: lightgrey;
+}
+
+footer * {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+/* --- mobile --- */
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section article .double-paragraph {
+        display: contents;
+    }
+}
+
+/* --- tablet --- */
+@media (max-width: 960px) {
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* --- animacions --- */
+@keyframes blurred {
+    from {
+        filter: blur(1.5rem);
+    }
+    to {
+        filter: none;
+    }
+}
+
+@keyframes minimizar {
+    from {
+        opacity: 0;
+        transform: scale(2, 2);
+    }
+
+    to {
+        opacity: 100;
+        transform: none;
+    }
+}
+
+@keyframes deslizar {
+    from {
+        transform: scaleX(1.2);
+    }
+    to {
+        transform: none;
+    }
+}
