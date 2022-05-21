@@ -12,6 +12,17 @@ $secondary: #FA5959;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.back-img-right {
+  z-index: -1;
+  background-color: $primary;
+  height: 50%;
+  width: 50vh;
+  position: absolute;
+  right: -25%;
+  bottom: 30px;
+  border-radius: 6rem 0 0 6rem;
+}
+
 header {
   .navbar-light {
     background-color: transparent!important;
