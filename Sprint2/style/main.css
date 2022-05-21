@@ -11125,17 +11125,26 @@ textarea.form-control-lg {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.back-img-right {
+.back-img, .back-img-left, .back-img-right {
   z-index: -1;
   background-color: #5265E1;
   height: 50%;
   width: 50vh;
   position: absolute;
-  right: -25%;
   bottom: 30px;
+}
+.back-img-right {
+  right: -25%;
   border-radius: 6rem 0 0 6rem;
 }
+.back-img-left {
+  left: -25%;
+  border-radius: 0 6rem 6rem 0;
+}
 
+header {
+  height: fit-content;
+}
 header .navbar-light {
   background-color: transparent !important;
 }
@@ -11154,6 +11163,31 @@ header .first-banner {
 }
 header .first-banner img {
   object-fit: contain;
+}
+
+main .second-banner {
+  height: 30vh;
+}
+@media (min-width: 768px) {
+  main .second-banner {
+    height: 50vh;
+  }
+}
+main .second-banner img {
+  object-fit: contain;
+}
+main .nav-pills {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+main .nav-pills .nav-link {
+  padding: 1rem;
+}
+main .nav-pills .nav-link.active {
+  color: #000;
+  font-weight: bolder;
+  background-color: transparent;
+  border-radius: 0;
+  border-bottom: 2px solid #FA5959;
 }
 
 /*# sourceMappingURL=main.css.map */
