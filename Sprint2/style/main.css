@@ -11118,5 +11118,31 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.btn {
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+header .navbar-light {
+  background-color: transparent !important;
+}
+header .nav-link {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #000;
+}
+header .first-banner {
+  height: 30vh;
+}
+@media (min-width: 768px) {
+  header .first-banner {
+    height: 50vh;
+  }
+}
+header .first-banner img {
+  object-fit: contain;
+}
 
 /*# sourceMappingURL=main.css.map */

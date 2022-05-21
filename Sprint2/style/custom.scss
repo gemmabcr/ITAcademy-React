@@ -4,3 +4,34 @@ $secondary: #FA5959;
 
 // import bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+.btn {
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+header {
+  .navbar-light {
+    background-color: transparent!important;
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #000;
+  }
+
+  .first-banner {
+    height: 30vh;
+
+    @media (min-width: 768px){
+      height: 50vh;
+    }
+
+    & img {
+      object-fit: contain;
+    }
+  }
+}

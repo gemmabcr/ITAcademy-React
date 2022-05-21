@@ -13,8 +13,11 @@
             <a class="navbar-brand" href="#">
                 <img src="../../img/logo-bookmark.svg" alt="Bookmark logo" height="24" class="d-inline-block align-text-top">
             </a>
-            <div class="d-flex">
-                <ul class="d-flex nav">
+            <a class="navbar-brand d-md-none" href="#">
+                <img src="../../img/icon-hamburger.svg" alt="Menu icon" height="16" width="16">
+            </a>
+            <div class="d-flex navbar-menu d-none d-md-inline-flex">
+                <ul class="d-flex nav me-4">
                     <li class="nav-item">
                         <a class="nav-link" href="#">features</a>
                     </li>
@@ -25,24 +28,24 @@
                         <a class="nav-link" href="#">contact</a>
                     </li>
                 </ul>
-                <button class="btn btn-secondary">Login</button>
+                <button class="btn btn-secondary text-uppercase text-white">Login</button>
             </div>
         </nav>
         <div class="row first-banner">
-            <div class="col-6">
-                <h3>
+            <div class="col-12 col-md-6 order-md-1 d-flex flex-column justify-content-center h-100 py-4">
+                <img src="../../img/illustration-hero.svg" alt="bookmark manager" height="100%" >
+            </div>
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-center h-100">
+                <h1 class="text-capitalize fw-bold text-center text-md-start">
                     a single bookmark manager
-                </h3>
-                <p>
+                </h1>
+                <p class="text-black-50 text-center text-md-start">
                     A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
                 </p>
-                <div class="button-group gap-2">
-                    <button class="btn btn-primary">Get in on Chrome</button>
+                <div class="d-flex justify-content-center justify-content-md-start">
+                    <button class="btn btn-primary me-2">Get in on Chrome</button>
                     <button class="btn btn-light">Get in on Firefox</button>
                 </div>
-            </div>
-            <div class="col-6">
-                <img src="../../img/illustration-hero.svg" alt="bookmark manager" width="75%">
             </div>
         </div>
 
