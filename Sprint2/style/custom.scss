@@ -97,3 +97,12 @@ img {
   justify-content:center;
   height: 80%
 }
+
+.accordion-item {
+  border-right-width: 0;
+  border-left-width: 0;
+}
+
+.accordion-header {
+  padding: 0.75rem 0;
+}
