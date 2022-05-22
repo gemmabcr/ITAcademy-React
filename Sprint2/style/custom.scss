@@ -5,6 +5,14 @@ $secondary: #FA5959;
 // import bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+img {
+  object-fit: contain;
+}
+.my-10 {
+  margin-top: 6rem!important;
+  margin-bottom: 6rem!important;
+}
+
 .btn {
   font-size: 0.75rem;
   font-weight: bold;
@@ -33,58 +41,59 @@ $secondary: #FA5959;
   }
 }
 
-header {
-  height: fit-content;
+.navbar-light {
+  background-color: transparent!important;
+}
 
-  .navbar-light {
-    background-color: transparent!important;
+.nav-link {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #000;
+}
+
+.first-banner {
+  min-height: 30vh;
+
+  @media (min-width: 768px){
+    min-height: 50vh;
   }
 
-  .nav-link {
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    color: #000;
-  }
-
-  .first-banner {
-    height: 30vh;
-
-    @media (min-width: 768px){
-      height: 50vh;
-    }
-
-    & img {
-      object-fit: contain;
-    }
+  & img {
+    object-fit: contain;
   }
 }
 
-main {
-  .second-banner{
-    height: 30vh;
+.second-banner img {
+  object-fit: contain;
+}
 
-    @media (min-width: 768px){
-      height: 50vh;
-    }
+.nav-pills {
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
 
-    & img {
-      object-fit: contain;
-    }
-  }
+.nav-pills .nav-link {
+  padding: 1rem;
+}
 
-  .nav-pills {
-    border-bottom: 1px solid rgba(0,0,0,0.15);
-  }
+.nav-pills .nav-link.active {
+  color: #000;
+  font-weight: bolder;
+  background-color: transparent;
+  border-radius: 0;
+  border-bottom: 2px solid $secondary;
+}
 
-  .nav-pills .nav-link {
-    padding: 1rem;
-  }
+.mine-card {
+  border-radius: 0.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
+  padding: 1rem;
+}
 
-  .nav-pills .nav-link.active {
-    color: #000;
-    font-weight: bolder;
-    background-color: transparent;
-    border-radius: 0;
-    border-bottom: 2px solid $secondary;
-  }
+.card-display-img {
+  display:flex;
+  justify-content:center;
+  height: 80%
 }

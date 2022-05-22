@@ -11118,6 +11118,15 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+img {
+  object-fit: contain;
+}
+
+.my-10 {
+  margin-top: 6rem !important;
+  margin-bottom: 6rem !important;
+}
+
 .btn {
   font-size: 0.75rem;
   font-weight: bold;
@@ -11142,52 +11151,61 @@ textarea.form-control-lg {
   border-radius: 0 6rem 6rem 0;
 }
 
-header {
-  height: fit-content;
-}
-header .navbar-light {
+.navbar-light {
   background-color: transparent !important;
 }
-header .nav-link {
+
+.nav-link {
   text-transform: uppercase;
   font-size: 0.75rem;
   color: #000;
 }
-header .first-banner {
-  height: 30vh;
+
+.first-banner {
+  min-height: 30vh;
 }
 @media (min-width: 768px) {
-  header .first-banner {
-    height: 50vh;
+  .first-banner {
+    min-height: 50vh;
   }
 }
-header .first-banner img {
+.first-banner img {
   object-fit: contain;
 }
 
-main .second-banner {
-  height: 30vh;
-}
-@media (min-width: 768px) {
-  main .second-banner {
-    height: 50vh;
-  }
-}
-main .second-banner img {
+.second-banner img {
   object-fit: contain;
 }
-main .nav-pills {
+
+.nav-pills {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
-main .nav-pills .nav-link {
+
+.nav-pills .nav-link {
   padding: 1rem;
 }
-main .nav-pills .nav-link.active {
+
+.nav-pills .nav-link.active {
   color: #000;
   font-weight: bolder;
   background-color: transparent;
   border-radius: 0;
   border-bottom: 2px solid #FA5959;
+}
+
+.mine-card {
+  border-radius: 0.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
+  padding: 1rem;
+}
+
+.card-display-img {
+  display: flex;
+  justify-content: center;
+  height: 80%;
 }
 
 /*# sourceMappingURL=main.css.map */
