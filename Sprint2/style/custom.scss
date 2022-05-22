@@ -112,6 +112,10 @@ img {
 
 .nav-pills .nav-link {
   padding: 1rem;
+
+  &:hover {
+    color: $secondary;
+  }
 }
 
 .nav-pills .nav-link.active {
@@ -144,6 +148,10 @@ img {
 
 .accordion-header {
   padding: 0.75rem 0;
+}
+
+.accordion-button:hover {
+  color: $secondary;
 }
 
 footer {
