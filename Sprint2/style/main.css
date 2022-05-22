@@ -11137,7 +11137,7 @@ img {
 .back-img, .back-img-left, .back-img-right {
   z-index: -1;
   background-color: #5265E1;
-  height: 50%;
+  height: 280px;
   width: 50vh;
   position: absolute;
   bottom: 30px;
@@ -11146,9 +11146,19 @@ img {
   right: -25%;
   border-radius: 6rem 0 0 6rem;
 }
+@media (min-width: 767px) and (max-width: 992px) {
+  .back-img-right {
+    right: -50%;
+  }
+}
 .back-img-left {
   left: -25%;
   border-radius: 0 6rem 6rem 0;
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  .back-img-left {
+    left: -50%;
+  }
 }
 
 .navbar-light {
