@@ -20,6 +20,33 @@ img {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.btn:hover {
+  background-color: white;
+}
+
+.btn-primary {
+  color: white;
+
+  &:hover {
+    border: 1px solid $primary;
+    color: $primary;
+  }
+}
+
+.btn-secondary {
+  color: white;
+
+  &:hover {
+    border: 1px solid $secondary;
+    color: $secondary;
+  }
+}
+
+.btn-light:hover {
+  border: 1px solid grey;
+  color: grey;
+}
+
 .max-ch {
   max-width: 65ch;
 }

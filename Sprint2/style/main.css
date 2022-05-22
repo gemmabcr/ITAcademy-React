@@ -11134,6 +11134,31 @@ img {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.btn:hover {
+  background-color: white;
+}
+
+.btn-primary {
+  color: white;
+}
+.btn-primary:hover {
+  border: 1px solid #5265E1;
+  color: #5265E1;
+}
+
+.btn-secondary {
+  color: white;
+}
+.btn-secondary:hover {
+  border: 1px solid #FA5959;
+  color: #FA5959;
+}
+
+.btn-light:hover {
+  border: 1px solid grey;
+  color: grey;
+}
+
 .max-ch {
   max-width: 65ch;
 }
