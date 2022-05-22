@@ -20,6 +20,10 @@ img {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.max-ch {
+  max-width: 65ch;
+}
+
 .back-img {
   z-index: -1;
   background-color: $primary;
@@ -113,4 +117,13 @@ img {
 
 .accordion-header {
   padding: 0.75rem 0;
+}
+
+footer {
+  background-color: $primary;
+  padding: 4rem;
+
+  h1 {
+    max-width: 20ch;
+  }
 }

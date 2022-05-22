@@ -11134,6 +11134,10 @@ img {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.max-ch {
+  max-width: 65ch;
+}
+
 .back-img, .back-img-left, .back-img-right {
   z-index: -1;
   background-color: #5265E1;
@@ -11225,6 +11229,14 @@ img {
 
 .accordion-header {
   padding: 0.75rem 0;
+}
+
+footer {
+  background-color: #5265E1;
+  padding: 4rem;
+}
+footer h1, footer .h1 {
+  max-width: 20ch;
 }
 
 /*# sourceMappingURL=main.css.map */
