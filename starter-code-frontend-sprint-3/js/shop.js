@@ -137,11 +137,24 @@ function generateCart() {
     }
   }
   //console.log(cart);
+  applyPromotionsCart(cart);
 }
 
 // Exercise 5
-function applyPromotionsCart() {
+function applyPromotionsCart(cart) {
     // Apply promotions to each item in the array "cart"
+  for (let list of cart){
+    if (list.id === 1 && list.quantity >= list.offer.number) {
+      let discount = 1-(list.offer.percent/100);
+      list.subtotalWithDiscount = list.subtotal*discount;
+    }
+
+    if (list.id === 3 && list.quantity >= list.offer.number) {
+      let discount = 1-(list.offer.percent/100);
+      list.subtotalWithDiscount = list.subtotal*discount;
+    }
+  }
+  //console.log(cart);
 }
 
 // Exercise 6
