@@ -80,11 +80,8 @@ function buy(id) {
       cartList.push(product)
     }
   }
-  let text = '';
-  for (let product of cartList) {
-    text += product.name + ', ';
-  }
-  //console.log(text)
+
+  generateCart(cartList);
 }
 
 // Exercise 2
@@ -93,17 +90,18 @@ function cleanCart() {
 }
 
 // Exercise 3
-function calculateTotal() {
+function calculateTotal(cartList) {
     // Calculate total price of the cart using the "cartList" array
   let total = 0;
   for (let added of cartList) {
     total += added.price;
   }
-  //console.log(total)
+
+  return total;
 }
 
 // Exercise 4
-function generateCart() {
+function generateCart(cartList) {
     // Using the "cartlist" array that contains all the items in the shopping cart, 
     // generate the "cart" array that does not contain repeated items, instead each item of this array "cart" shows the quantity of product.
   let cart = [];
@@ -136,7 +134,6 @@ function generateCart() {
       cart.push(product);
     }
   }
-  //console.log(cart);
   applyPromotionsCart(cart);
 }
 
@@ -145,21 +142,42 @@ function applyPromotionsCart(cart) {
     // Apply promotions to each item in the array "cart"
   for (let list of cart){
     if (list.id === 1 && list.quantity >= list.offer.number) {
-      let discount = 1-(list.offer.percent/100);
-      list.subtotalWithDiscount = list.subtotal*discount;
+      list.discount = 1-(list.offer.percent/100);
+      list.subtotalWithDiscount = (list.subtotal*list.discount).toFixed(2);
     }
 
     if (list.id === 3 && list.quantity >= list.offer.number) {
-      let discount = 1-(list.offer.percent/100);
-      list.subtotalWithDiscount = list.subtotal*discount;
+      list.discount = 1-(list.offer.percent/100);
+      list.subtotalWithDiscount = (list.subtotal*list.discount).toFixed(2);
     }
   }
-  //console.log(cart);
+
+  printCart(cart);
 }
 
 // Exercise 6
-function printCart() {
+function printCart(cart) {
     // Fill the shopping cart modal manipulating the shopping cart dom
+  let total = 0;
+  let textCart = '';
+
+  for (let list of cart) {
+    if (list.subtotalWithDiscount) {
+      textCart += `<tr><th scope="row">${list.name}</th><td>${list.price*list.discount}</td><td>${list.quantity}</td><td>${list.subtotalWithDiscount}</td></tr>`;
+    } else {
+      textCart += `<tr><th scope="row">${list.name}</th><td>${list.price}</td><td>${list.quantity}</td><td>${list.subtotal}</td></tr>`;
+    }
+  }
+  for (let list of cart){
+    if (list.subtotalWithDiscount) {
+      total += Number(list.subtotalWithDiscount);
+    } else {
+      total += Number(list.subtotal);
+    }
+  }
+
+  document.getElementById('cart_list').innerHTML = textCart;
+  document.getElementById('total_price').innerHTML = total;
 }
 
 
@@ -179,5 +197,4 @@ function removeFromCart(id) {
 }
 
 function open_modal(){
-	printCart();
 }
