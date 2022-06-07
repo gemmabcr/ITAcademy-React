@@ -44,7 +44,7 @@ function validate() {
 
 	// Validate last name field
 	if(fLastN.value === "" || fLastN.length >= 3 || !fLastN.value.match(letters)){
-		errorName.style.display = "block";
+		errorLastN.style.display = "block";
 		error++;
 	}
 
